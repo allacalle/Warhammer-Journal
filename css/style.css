@@ -1,0 +1,115 @@
+:root{
+
+    --animation-speed: .35s;
+
+    --book-width: min(70vw, 700px);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:url("../assets/backgrounds/table.jpg");
+    background-size:cover;
+    background-position:center;
+
+    font-family:serif;
+
+}
+
+#scene{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+#book{
+
+    position:relative;
+
+    width:var(--book-width);
+
+}
+
+#shadow{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:12px;
+
+    filter:blur(25px);
+
+    background:rgba(0,0,0,.35);
+
+    transform:translateY(25px);
+
+    z-index:0;
+
+}
+
+#cover{
+
+    position:relative;
+
+    display:block;
+
+    width:100%;
+
+    cursor:pointer;
+
+    transition:
+        transform var(--animation-speed),
+        filter var(--animation-speed);
+
+    filter:drop-shadow(0 10px 30px rgba(0,0,0,.35));
+
+    z-index:2;
+
+}
+
+#cover:hover{
+
+    transform:scale(1.02);
+
+}
+
+#pages{
+
+    display:none;
+
+}
+
+#ui{
+
+    display:none;
+
+}
