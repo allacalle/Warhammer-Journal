@@ -23,19 +23,19 @@
 
             <!-- ESTADO 2: Cuaderno abierto -->
             <div id="book-open" class="hidden">
-                <!-- Botón de cerrar discreto en la esquina superior -->
+                <!-- Botón de cerrar X en la esquina -->
                 <button id="btn-close" class="close-btn-top" title="Cerrar cuaderno">✖</button>
 
                 <!-- Flecha izquierda -->
                 <button id="btn-prev" class="page-arrow arrow-left" title="Página anterior">❮</button>
 
-                <!-- Plantilla del cuaderno abierto -->
-                <img id="journal-template" src="assets/backgrounds/journal_open.png" alt="Cuaderno abierto">
-
-                <!-- Ilustración -->
+                <!-- 1. CAPA INFERIOR (DEBAJO): La ilustración actual -->
                 <div id="illustration-overlay">
                     <img id="current-page" src="" alt="Página del diario">
                 </div>
+
+                <!-- 2. CAPA SUPERIOR (ENCIMA): El marco de cuero real con calado transparente -->
+                <img id="journal-frame" src="assets/backgrounds/journal_frame.png" alt="Marco del cuaderno">
 
                 <!-- Flecha derecha -->
                 <button id="btn-next" class="page-arrow arrow-right" title="Página siguiente">❯</button>
