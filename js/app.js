@@ -1,7 +1,7 @@
-const journal = document.getElementById("journal");
+const cover = document.getElementById("cover");
 
-journal.addEventListener("click", () => {
+cover.addEventListener("click", () => {
 
-    console.log("Abrir cuaderno");
+    console.log("Abrir cuaderno...");
 
 });

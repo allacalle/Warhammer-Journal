@@ -2,7 +2,8 @@
 
     --animation-speed: .35s;
 
-    --book-width: min(70vw, 700px);
+    --book-width: min(92vw, 1250px);
+
 
 }
 
@@ -44,7 +45,6 @@ body{
     height:100%;
 
     display:flex;
-
     justify-content:center;
     align-items:center;
 
@@ -56,23 +56,30 @@ body{
 
     width:var(--book-width);
 
+    transform:translateY(35px);
+
 }
 
 #shadow{
 
     position:absolute;
 
-    inset:0;
+    left:4%;
+    right:4%;
+    top:6%;
+    bottom:3%;
 
-    border-radius:12px;
+    border-radius:20px;
 
-    filter:blur(25px);
+    background:rgba(0,0,0,.45);
 
-    background:rgba(0,0,0,.35);
+    filter:blur(35px);
 
-    transform:translateY(25px);
+    transform:translateY(30px);
 
     z-index:0;
+
+    transition:all var(--animation-speed);
 
 }
 
@@ -84,21 +91,46 @@ body{
 
     width:100%;
 
+    z-index:2;
+
     cursor:pointer;
+
+    user-select:none;
+
+    transform:rotate(-2deg);
 
     transition:
         transform var(--animation-speed),
         filter var(--animation-speed);
 
-    filter:drop-shadow(0 10px 30px rgba(0,0,0,.35));
-
-    z-index:2;
+    filter:drop-shadow(0 12px 30px rgba(0,0,0,.35));
 
 }
 
 #cover:hover{
 
-    transform:scale(1.02);
+    transform:
+        translateY(-6px)
+        rotate(-1.3deg)
+        scale(1.02);
+
+    filter:drop-shadow(0 18px 40px rgba(0,0,0,.45));
+
+}
+
+#cover:hover + #pages{
+
+    display:none;
+
+}
+
+#book:hover #shadow{
+
+    transform:translateY(38px);
+
+    filter:blur(45px);
+
+    opacity:.95;
 
 }
 
