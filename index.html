@@ -2,14 +2,10 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Travel Journal</title>
-
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -18,16 +14,32 @@
 
         <div id="book">
 
-            <div id="shadow"></div>
+            <!-- ESTADO 1: Cuaderno cerrado -->
+            <div id="book-closed">
+                <div id="shadow"></div>
+                <img id="cover" src="assets/backgrounds/journal_closed.png" alt="Cuaderno de viaje">
+                <div class="click-hint">Haz clic para abrir el diario</div>
+            </div>
 
-            <img
-                id="cover"
-                src="assets/backgrounds/journal_closed.png"
-                alt="Cuaderno de viaje">
+            <!-- ESTADO 2: Cuaderno abierto -->
+            <div id="book-open" class="hidden">
+                <!-- Botón de cerrar discreto en la esquina superior -->
+                <button id="btn-close" class="close-btn-top" title="Cerrar cuaderno">✖</button>
 
-            <div id="pages"></div>
+                <!-- Flecha izquierda -->
+                <button id="btn-prev" class="page-arrow arrow-left" title="Página anterior">❮</button>
 
-            <div id="ui"></div>
+                <!-- Plantilla del cuaderno abierto -->
+                <img id="journal-template" src="assets/backgrounds/journal_open.png" alt="Cuaderno abierto">
+
+                <!-- Ilustración -->
+                <div id="illustration-overlay">
+                    <img id="current-page" src="" alt="Página del diario">
+                </div>
+
+                <!-- Flecha derecha -->
+                <button id="btn-next" class="page-arrow arrow-right" title="Página siguiente">❯</button>
+            </div>
 
         </div>
 
