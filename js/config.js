@@ -1,5 +1,5 @@
 const CONFIG = {
-    totalPages: 10,          // Cambia al número total de imágenes que tengas
+    totalPages: 14,          // Cambia al número total de imágenes que tengas
     imageFolder: 'images/journal/', // Corregido a la ruta de tu carpeta de imágenes
     imageExtension: '.png',
     animationDuration: 350
